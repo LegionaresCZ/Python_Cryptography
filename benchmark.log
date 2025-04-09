@@ -1,0 +1,140 @@
+[Benchmark] remove_diacritics took 0.0097 seconds
+[Benchmark] remove_diacritics took 0.0110 seconds
+[Benchmark] remove_diacritics took 0.0105 seconds | Args size: 390000 chars
+[Benchmark] remove_diacritics took 0.0101 seconds | Args size: 390000 chars
+[Benchmark] clean_text took 0.0158 seconds | Args size: 481704 chars
+[Benchmark] clean_text took 0.0096 seconds | Args size: 481702 chars
+[Benchmark] clean_text_re took 0.0198 seconds | Args size: 481702 chars
+[Benchmark] clean_text_re took 0.0214 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0109 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0115 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0105 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0132 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0116 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0108 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0101 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0101 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0109 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0139 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0119 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0112 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0107 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0103 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0123 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0121 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0165 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0230 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0255 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0280 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0220 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0239 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0162 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 0.3796 seconds | Args size: 0 chars
+[Benchmark] clean_text took 0.0245 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0166 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0245 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 10.2408 seconds | Args size: 4 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0230 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0280 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 0.0063 seconds | Args size: 4 chars
+[Benchmark] clean_text took 0.0210 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0235 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0196 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0210 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0176 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0195 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0270 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0165 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0238 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0220 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0210 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0196 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0195 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0244 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0310 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0205 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0236 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0205 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0161 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0143 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0210 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0205 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0270 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0185 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.4658 seconds
+[Benchmark] clean_text took 0.0167 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0230 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0252 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0158 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0197 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0168 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0256 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0150 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0250 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0260 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0180 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0252 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0275 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0162 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0250 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0191 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0163 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1332 seconds
+[Benchmark] bi_counts took 0.0706 seconds
+[Benchmark] clean_text took 0.0244 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.4065 seconds
+[Benchmark] bi_counts took 0.0856 seconds
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1819 seconds
+[Benchmark] bi_counts took 0.0626 seconds
+[Benchmark] clean_text took 0.0245 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1381 seconds
+[Benchmark] bi_counts took 0.0693 seconds
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1483 seconds
+[Benchmark] bi_counts took 0.0701 seconds
+[Benchmark] clean_text took 0.0255 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2256 seconds
+[Benchmark] bi_counts took 0.0665 seconds
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2709 seconds
+[Benchmark] bi_counts took 0.0644 seconds
+[Benchmark] normalize took 0.0010 seconds
+[Benchmark] clean_text took 0.0195 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2712 seconds
+[Benchmark] bi_counts took 0.0602 seconds
+[Benchmark] clean_text took 0.0223 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1664 seconds
+[Benchmark] bi_counts took 0.0730 seconds
+[Benchmark] normalize took 0.0042 seconds
+[Benchmark] clean_text took 0.0185 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1848 seconds
+[Benchmark] bi_counts took 0.0646 seconds
+[Benchmark] normalize took 0.0010 seconds
+[Benchmark] clean_text took 0.0240 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1736 seconds
+[Benchmark] bi_counts took 0.0663 seconds
+[Benchmark] normalize took 0.0004 seconds
+[Benchmark] clean_text took 0.0106 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 0.6078 seconds
+[Benchmark] bi_counts took 0.0441 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0100 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 0.6104 seconds
+[Benchmark] bi_counts took 0.0425 seconds
+[Benchmark] normalize took 0.0000 seconds
