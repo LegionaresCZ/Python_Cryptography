@@ -138,3 +138,395 @@
 [Benchmark] temp_func took 0.6104 seconds
 [Benchmark] bi_counts took 0.0425 seconds
 [Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2144 seconds
+[Benchmark] bi_counts took 0.0720 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0279 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2194 seconds
+[Benchmark] bi_counts took 0.0700 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1919 seconds
+[Benchmark] bi_counts took 0.0725 seconds
+[Benchmark] normalize took 0.0015 seconds
+[Benchmark] clean_text took 0.0250 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1938 seconds
+[Benchmark] bi_counts took 0.0703 seconds
+[Benchmark] normalize took 0.0020 seconds
+[Benchmark] clean_text took 0.0295 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1672 seconds
+[Benchmark] bi_counts took 0.0556 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0322 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1675 seconds
+[Benchmark] bi_counts took 0.0667 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0159 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2129 seconds
+[Benchmark] bi_counts took 0.0662 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0225 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2306 seconds
+[Benchmark] bi_counts took 0.0595 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0161 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1921 seconds
+[Benchmark] bi_counts took 0.0650 seconds
+[Benchmark] normalize took 0.0010 seconds
+[Benchmark] clean_text took 0.0206 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1876 seconds
+[Benchmark] bi_counts took 3.7860 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1782 seconds
+[Benchmark] bi_counts took 0.0652 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1621 seconds
+[Benchmark] bi_counts took 0.0623 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0243 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.3337 seconds
+[Benchmark] bi_counts took 0.0902 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0160 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1489 seconds
+[Benchmark] bi_counts took 0.0645 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0098 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1620 seconds
+[Benchmark] bi_counts took 0.0547 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2929 seconds
+[Benchmark] bi_counts took 0.0695 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0185 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1770 seconds
+[Benchmark] bi_counts took 0.0593 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0200 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1722 seconds
+[Benchmark] bi_counts took 0.0670 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0153 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2046 seconds
+[Benchmark] bi_counts took 0.0720 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0160 seconds | Args size: 481702 chars
+[Benchmark] clean_text took 0.0161 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1350 seconds
+[Benchmark] bi_counts took 0.0672 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0190 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1711 seconds
+[Benchmark] bi_counts took 0.0792 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0118 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.1380 seconds
+[Benchmark] codes_from_text took 0.0485 seconds
+[Benchmark] bi_counts took 0.0675 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] clean_text took 0.0160 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.2105 seconds
+[Benchmark] codes_from_text took 0.0565 seconds
+[Benchmark] bi_counts took 0.0726 seconds
+[Benchmark] normalize took 0.0010 seconds
+[Benchmark] clean_text took 0.0196 seconds | Args size: 481702 chars
+[Benchmark] temp_func took 1.4742 seconds
+[Benchmark] codes_from_text took 0.0659 seconds
+[Benchmark] bi_counts took 0.0697 seconds
+[Benchmark] normalize took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 49 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0014 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] random_key took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0020 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0020 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] encrypt took 0.0013 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 58 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0121 seconds | Args size: 60046 chars
+[Benchmark] encrypt took 0.0182 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 60046 chars
+[Benchmark] decrypt took 0.0100 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 60046 chars
+[Benchmark] decrypt took 0.0241 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0254 seconds | Args size: 600046 chars
+[Benchmark] encrypt took 0.1027 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0305 seconds | Args size: 600046 chars
+[Benchmark] decrypt took 0.1412 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0287 seconds | Args size: 600046 chars
+[Benchmark] decrypt took 0.1588 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2711 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.8636 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2769 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 2.2020 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2767 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 2.5784 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 0.1984 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 54 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 54 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2820 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.6765 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2800 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 2.0324 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2658 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 1.9456 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 0.1952 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 54 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.0000 seconds | Args size: 54 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 0.1930 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 0.2140 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 0.2081 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0010 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 0.2014 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt took 2.5321 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.1950 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2845 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.9180 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt_2 took 1.6186 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.2060 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2697 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.9038 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt_2 took 1.6305 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 2.1282 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 1.9774 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.5513 seconds | Args size: 12000046 chars
+[Benchmark] encrypt took 5.0347 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt_2 took 4.4813 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.5527 seconds | Args size: 12000046 chars
+[Benchmark] encrypt took 4.5090 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt_2 took 4.4816 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 5.6455 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 5.1811 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.5473 seconds | Args size: 12000046 chars
+[Benchmark] encrypt took 4.4543 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt_2 took 4.5099 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 5.1150 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 5.1786 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2738 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.6174 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encrypt_2 took 1.6372 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 2.1721 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] decrypt took 1.9721 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2579 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.6410 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2858 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 2.0081 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2703 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 1.9011 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2711 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.6050 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2863 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 1.9980 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2681 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 2.2530 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] random_key took 0.0000 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2804 seconds | Args size: 6000046 chars
+[Benchmark] encrypt took 1.6514 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2735 seconds | Args size: 6000046 chars
+[Benchmark] decrypt took 2.1316 seconds
+[Benchmark] encode took 0.0000 seconds | Args size: 83 chars
+[Benchmark] encode took 0.2680 seconds | Args size: 6000046 chars

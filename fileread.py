@@ -1,6 +1,7 @@
 import time
 import os
 from functools import wraps
+import json
 
 # text
 # text_codes
@@ -82,12 +83,33 @@ def char_code_idx(char: str) -> int|str:
     return char_codes[char]
 
 @benchmark(False,"benchmark.log")
-def temp_func(text:str, n: int) -> list[int]:
+def temp_func(text:str, n: int = None) -> list[int]:
     result: list = []
+    if n is None:
+        n = len(text)
     for e in range(0,n):
         result.append(char_code_idx(text[e]))
     return result
-        
+
+char_codes: dict = {
+    "A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5,
+    "G": 6, "H": 7, "I": 8, "J": 9, "K": 10, "L": 11,
+    "M": 12, "N": 13, "O": 14, "P": 15, "Q": 16, "R": 17,
+    "S": 18, "T": 19, "U": 20, "V": 21, "W": 22, "X": 23,
+    "Y": 24, "Z": 25, "_": 26,
+    "0": 27, "1": 28, "2": 29, "3": 30,
+    "4": 31, "5": 32, "6": 33, "7": 34,
+    "8": 35, "9": 36
+    }
+
+@benchmark(False, "benchmark.log")
+def codes_from_text(text:str, n: int = None) -> list[int]:
+    result:list = []
+    if n is None:
+        n = len(text)
+    for e in range(0,n):
+        result.append(char_codes[text[e]])
+    return result
 
 # Bigrams
 
@@ -99,7 +121,7 @@ def bi_counts(sample_text: list[int]) -> dict[int,list[list[int]]]:
     for x in range(37):
         matrix.append([])
         for y in range(37):
-            matrix[x].append(1)
+            matrix[x].append(0)
             total += 1
 
     for gram in sample_text:
@@ -110,6 +132,11 @@ def bi_counts(sample_text: list[int]) -> dict[int,list[list[int]]]:
             except:
                 print("except", last_gram, gram)
         last_gram = gram
+    
+    for x in range(37):
+        for y in range(37):
+            if matrix[x][y] == 0:
+                matrix[x][y] = 1
     
     result: dict = {"total": total, "absolute": matrix}
     return result
@@ -130,8 +157,21 @@ def normalize(matrix: list[list[int]], total: int) -> list[list[float]]:
     return result
 
 
-codes = temp_func(krakatit_text, len(krakatit_text))
+codes = temp_func(krakatit_text)
+codes_from_text = codes_from_text(krakatit_text)
 bigrams = bi_counts(codes)
 bigrams_relative = normalize(bigrams["absolute"],len(codes))
 
+def get_digram_relative_count(digram: str) -> float:
+    if len(digram) != 2:
+        return 0
+    x, y = char_code_idx(digram[0].upper()),char_code_idx(digram[1].upper())
+    return bigrams_relative[x][y]
 
+def save_matrix_json(matrix, filename="bigram_matrix.json"):
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(matrix, f, indent=4)  # `indent=4` for readability
+
+def load_matrix_json(filename="bigram_matrix.json"):
+    with open(filename, 'r', encoding='utf-8') as f:
+        return json.load(f)
