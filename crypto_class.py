@@ -45,6 +45,8 @@ class Crypto:
     def __init__(self, text: str):
         self.text: str= self.clean_text(text)
         self.key: str = None
+        self._encryption_table: dict = None
+        self._decryption_table: dict = None
 
     def load_matrix_json(filename="bigram_matrix.json"):
         with open(filename, 'r', encoding='utf-8') as f:
@@ -77,19 +79,11 @@ class Crypto:
 
     @benchmark(True,"benchmark.log")
     def encode(self, text: str) -> list[int]:
-        result = []
-        encoding = self.chars_to_codes
-        for e in text:
-            result.append(encoding[e])
-        return result
+        return [self.chars_to_codes[c] for c in text]
 
     @benchmark(True,"benchmark.log")
     def decode(self, codes: list[int]) -> str:
-        result: ''
-        decoding = self.codes_to_chars
-        for e in codes:
-            result = result + decoding[e]
-        return result
+        return "".join([self.codes_to_chars[code] for code in codes])
 
     @benchmark(False,"benchmark.log")
     def random_key(self):
@@ -105,28 +99,35 @@ class Crypto:
                 char_back = self.codes_to_chars[idx]
                 result = result + char_back
             return result
-        self.key = permutate(self.char_set)
-        return self.key
-
+        rand_key = permutate(self.char_set)
+        return rand_key
+    
+    @benchmark(False,"benchmark.log")
+    def set_key(self, key:str):
+        self.key = key
+        encoded_key = self.encode(key)
+        
+        encryption:dict = {}
+        decryption:dict = {}
+        
+        for char, code in self.chars_to_codes.items():
+            substituted_code = encoded_key[code]
+            substituted_char = self.codes_to_chars[substituted_code]
+            
+            encryption[ord(char)] = ord(substituted_char)
+            decryption[ord(substituted_char)] = ord(char)
+            
+        self._encryption_table = str.maketrans(encryption)
+        self._decryption_table = str.maketrans(decryption)
     
     # I'm using so much encoding, wouldn't it just be easier to make a custom str subclass that has an encode method?
     # At the very least I should make an encode and decode function
     @benchmark(False,"benchmark.log")
     def encrypt(self, key:str = None) -> str:
-        if key is None and self.key is None:
-            key = self.random_key()
-        key = self.encode(self.key)
-        text = self.encode(self.text)
-        # so from the text we take the number as the index in the key and look what number it has and
-        permutated_text: list[int] = []
-        for char_code in text:
-            substituted_code = key[char_code]
-            permutated_text.append(substituted_code)
-        # and back to text
-        result = ''
-        for perm_code in permutated_text:
-            result = result + self.codes_to_chars[perm_code]
-        self.text = result
+        if key is not None or self.key is None:
+            self.set_key(key or self.random_key())
+        
+        self.text = self.text.translate(self._encryption_table)
         return self.text
     
 
@@ -134,14 +135,7 @@ class Crypto:
     def decrypt(self) -> str:
         if self.key is None:
             raise Exception #TODO
-        key = self.encode(self.key)
-        text = self.encode(self.text)
-        # now we find the index in key of the number in text_codes
-        # combining the two steps here
-        result = '' 
-        for code in text:
-            result = result + self.codes_to_chars[key.index(code)]
-        self.text = result
+        self.text = self.text.translate(self._decryption_table)
         return self.text
         
     @benchmark(False,"benchmark.log")
