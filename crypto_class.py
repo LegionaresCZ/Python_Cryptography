@@ -1,8 +1,9 @@
 import json
-from random import randint
+from random import randint, sample
 from functools import wraps
 import time
 import os
+import numpy as np
 
 def benchmark(log_args_size=True, log_file="benchmark.log"):
     """
@@ -44,13 +45,18 @@ def benchmark(log_args_size=True, log_file="benchmark.log"):
 class Crypto:
     def __init__(self, text: str):
         self.text: str= self.clean_text(text)
-        self.key: str = None
-        self._encryption_table: dict = None
-        self._decryption_table: dict = None
+        self._key_list: list[int] = None
+        self._key_str: str = None
+        self._encryption_table: dict[int, int] = None
+        self._decryption_table: dict[int, int] = None
+        self._encoded_text = np.array(self.encode(self.text), dtype=np.uint8)
 
+    @staticmethod
     def load_matrix_json(filename="bigram_matrix.json"):
         with open(filename, 'r', encoding='utf-8') as f:
             return json.load(f)
+
+    bigram_ref_matrix = np.log(np.array(load_matrix_json(), dtype=float) + 1e-10)
 
     def clean_text(self, text:str):
         diacritic_map = str.maketrans(
@@ -60,7 +66,13 @@ class Crypto:
         )
         return text.translate(diacritic_map)
 
-    bigram_matrix = load_matrix_json()
+    @property
+    def key(self) -> str:
+        """Lazy regeneration of key string when needed"""
+        if self._key_str is None:
+            self._key_str = ''.join(self._key_list)
+        return self._key_str
+    
     
     char_set = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789'
     chars_to_codes: dict = {
@@ -73,79 +85,126 @@ class Crypto:
         "4": 31, "5": 32, "6": 33, "7": 34,
         "8": 35, "9": 36
         }
+    
+    encode_table = str.maketrans({
+        ord(char):code for char,code in chars_to_codes.items()
+        })
+    
     codes_to_chars: dict = {}
+    
     for key,value in chars_to_codes.items():
         codes_to_chars[value] = key
+    
+    decode_table = str.maketrans({
+        code: ord(char) for code, char in codes_to_chars.items()
+        })
+    
 
-    @benchmark(True,"benchmark.log")
     def encode(self, text: str) -> list[int]:
         return [self.chars_to_codes[c] for c in text]
 
-    @benchmark(True,"benchmark.log")
-    def decode(self, codes: list[int]) -> str:
-        return "".join([self.codes_to_chars[code] for code in codes])
 
-    @benchmark(False,"benchmark.log")
+    def decode(self, codes: list[int]) -> str:
+        return ''.join([self.codes_to_chars[c] for c in codes])
+
+
     def random_key(self):
-        def permutate(chars: str):
-            permut_ids: list[int] = []
-            id_to: int = 0
-            while len(permut_ids) < len(chars):
-                id_to = randint(0, len(chars) - 1)
-                if id_to not in permut_ids:
-                    permut_ids.append(id_to)
-            result: str = ''
-            for idx in permut_ids:
-                char_back = self.codes_to_chars[idx]
-                result = result + char_back
-            return result
-        rand_key = permutate(self.char_set)
-        return rand_key
+        chars = list(self.char_set)
+        np.random.shuffle(chars)
+        return ''.join(chars)
     
-    @benchmark(False,"benchmark.log")
+
     def set_key(self, key:str):
-        self.key = key
-        encoded_key = self.encode(key)
+        self._key_list = list(key)
+        self._key_str = key
+        self._update_translation_tables()
         
-        encryption:dict = {}
-        decryption:dict = {}
-        
-        for char, code in self.chars_to_codes.items():
-            substituted_code = encoded_key[code]
-            substituted_char = self.codes_to_chars[substituted_code]
-            
-            encryption[ord(char)] = ord(substituted_char)
-            decryption[ord(substituted_char)] = ord(char)
-            
-        self._encryption_table = str.maketrans(encryption)
-        self._decryption_table = str.maketrans(decryption)
     
-    # I'm using so much encoding, wouldn't it just be easier to make a custom str subclass that has an encode method?
-    # At the very least I should make an encode and decode function
-    @benchmark(False,"benchmark.log")
-    def encrypt(self, key:str = None) -> str:
-        if key is not None or self.key is None:
-            self.set_key(key or self.random_key())
+    def _update_translation_tables(self) -> None:
+        encrypted_chars = [self._key_list[self.chars_to_codes[c]] for c in self.char_set]
         
+        self._encryption_table = str.maketrans(
+            self.char_set,
+            ''.join(encrypted_chars))
+        
+        self._decryption_table = str.maketrans(
+            ''.join(encrypted_chars),
+            self.char_set)
+
+
+    def encrypt(self, key:str = None) -> str:
+        if key is not None or self._key_list is None:
+            self.set_key(key or self.random_key())
         self.text = self.text.translate(self._encryption_table)
         return self.text
     
 
-    @benchmark(False,"benchmark.log")
     def decrypt(self) -> str:
         if self.key is None:
             raise Exception #TODO
         self.text = self.text.translate(self._decryption_table)
         return self.text
+    
+
+    def bi_counts_np(self, sample_text: np.ndarray) -> dict:
+        matrix = np.ones((37, 37), dtype=np.int32)
         
+        last_grams = sample_text[:-1]
+        next_grams = sample_text[1:]
+        
+        np.add.at(matrix, (last_grams, next_grams), 1)
+        
+        return matrix
+    
+    def _mcmc_step(self, key_list:list[int]):
+        remap = np.array(key_list, dtype=np.uint8)
+        encoded_text = self._encoded_text
+        remapped = remap[encoded_text]
+        counts = self.bi_counts_np(remapped)
+        return np.dot(counts.ravel(), self.bigram_ref_matrix.ravel())
+
     @benchmark(False,"benchmark.log")
-    def break_encrypt(self):
-        ...
+    def break_encrypt(self, depth:int=10000):
+        current_key = list(self.encode(self.random_key()))
+        best_key = current_key.copy()
+        current_score = self._mcmc_step(current_key)
+        best_score = current_score
+        T = 1.0
+
+        for e in range(depth):
+            i, j = np.random.choice(len(current_key),2, replace=False)
+            current_key[i], current_key[j] = current_key[j], current_key[i]
+
+            proposed_score = self._mcmc_step(current_key)
+            if proposed_score > current_score or np.random.rand() < np.exp(proposed_score - current_score / T):
+                #accept proposal
+                current_score = proposed_score
+                if proposed_score > best_score:
+                    best_key = current_key.copy()
+                    best_score = current_score
+            else:
+                # reject and reverse
+                current_key[i], current_key[j] = current_key[j], current_key[i]
+        self._key_list = best_key
+        return self.decrypt()
 
 
-ex = Crypto('example text' * 500000)
+with open('kytice.txt', 'r', encoding='utf-8') as file:
+    krakatit_text = file.read()
+ex = Crypto(krakatit_text)
 original = ex.text
 
 ex.encrypt()
-print(ex.decrypt() == original) # True
-print(ex.decrypt() == original) # False
+print(ex._key_list)
+print(ex.text)
+ex.break_encrypt(500)
+print(ex._key_list)
+print(ex.text)
+
+ex2 = Crypto('Jak to je s kratšímy texty')
+ex2.encrypt()
+print(ex2.text)
+ex2.break_encrypt()
+print(ex2.text)
+
+
