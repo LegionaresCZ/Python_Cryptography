@@ -69,8 +69,8 @@ class Crypto:
     @property
     def key(self) -> str:
         """Lazy regeneration of key string when needed"""
-        if self._key_str is None:
-            self._key_str = ''.join(self._key_list)
+        if self._key_str is None and self._key_list is not None:
+            self._key_str = ''.join([self.codes_to_chars[code] for code in self._key_list])
         return self._key_str
     
     
@@ -161,11 +161,14 @@ class Crypto:
         encoded_text = self._encoded_text
         remapped = remap[encoded_text]
         counts = self.bi_counts_np(remapped)
-        return np.dot(counts.ravel(), self.bigram_ref_matrix.ravel())
+        dot = np.dot(counts.ravel(), self.bigram_ref_matrix.ravel())
+        return dot
 
     @benchmark(False,"benchmark.log")
     def break_encrypt(self, depth:int=10000):
         current_key = list(self.encode(self.random_key()))
+        print(f"Actual key: {self.encode(self._key_list)}")
+        print(f"Starting guess: {current_key}")
         best_key = current_key.copy()
         current_score = self._mcmc_step(current_key)
         best_score = current_score
@@ -176,7 +179,7 @@ class Crypto:
             current_key[i], current_key[j] = current_key[j], current_key[i]
 
             proposed_score = self._mcmc_step(current_key)
-            if proposed_score > current_score or np.random.rand() < np.exp(proposed_score - current_score / T):
+            if proposed_score > current_score or np.random.rand() < (np.exp((proposed_score - current_score)/ T)):
                 #accept proposal
                 current_score = proposed_score
                 if proposed_score > best_score:
@@ -185,26 +188,34 @@ class Crypto:
             else:
                 # reject and reverse
                 current_key[i], current_key[j] = current_key[j], current_key[i]
-        self._key_list = best_key
+        print(f"Best key: {best_key}")
+        self.set_key(''.join([str(e) for e in best_key]))
         return self.decrypt()
 
+def main():
+    with open('kytice.txt', 'r', encoding='utf-8') as file:
+        krakatit_text = file.read()
+    ex = Crypto(krakatit_text)
+    original = ex.text
 
-with open('kytice.txt', 'r', encoding='utf-8') as file:
-    krakatit_text = file.read()
-ex = Crypto(krakatit_text)
-original = ex.text
-
-ex.encrypt()
-print(ex._key_list)
-print(ex.text)
-ex.break_encrypt(500)
-print(ex._key_list)
-print(ex.text)
-
-ex2 = Crypto('Jak to je s kratšímy texty')
-ex2.encrypt()
-print(ex2.text)
-ex2.break_encrypt()
-print(ex2.text)
+    ex.encrypt()
+    ex.break_encrypt()
 
 
+    ex2 = Crypto('Jak to je s kratšímy texty')
+    ex2.encrypt()
+    ex2.break_encrypt()
+
+
+    with open("text_1000_sample_1_plaintext.txt", 'r',encoding='utf-8') as file:
+        ex3 = Crypto(file.read())
+    ex3.encrypt()
+    ex3.break_encrypt()
+
+
+    ex4 = Crypto('Ono to funguje, jen ne tak jak jsem myslel, yay')
+    ex4.encrypt()
+    ex4.break_encrypt()
+
+if __name__ == "__main__":
+    main()
